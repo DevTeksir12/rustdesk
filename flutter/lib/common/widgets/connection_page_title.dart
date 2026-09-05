@@ -11,7 +11,7 @@ Widget getConnectionPageTitle(BuildContext context, bool isWeb) {
           child: Row(
         children: [
           AutoSizeText(
-            translate('Control Remote Desktop'),
+            translate('Teksir Remote Desktop'),
             maxLines: 1,
             style: Theme.of(context)
                 .textTheme
@@ -36,3 +36,4 @@ Widget getConnectionPageTitle(BuildContext context, bool isWeb) {
     ],
   );
 }
+
