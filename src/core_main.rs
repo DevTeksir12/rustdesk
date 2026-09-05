@@ -33,6 +33,7 @@ pub fn core_main() -> Option<Vec<String>> {
         return None;
     }
     crate::load_custom_client();
+    *config::APP_NAME.write().unwrap() = "TeksirViewer".to_owned();
     #[cfg(windows)]
     if !crate::platform::windows::bootstrap() {
         // return None to terminate the process
