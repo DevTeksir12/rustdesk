@@ -41,7 +41,7 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
   double? get height => bind.isIncomingOnly() ? null : em * 3;
 
   void onUsePublicServerGuide() {
-    const url = "https://rustdesk.com/pricing";
+    const url = "https://www.youtube.com/c/teknisimusafir";
     canLaunchUrlString(url).then((can) {
       if (can) {
         launchUrlString(url);
@@ -94,7 +94,7 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
                       children: [
                         Flexible(
                           child: Text(
-                            translate('setup_server_tip'),
+                            'https://www.youtube.com/c/teknisimusafir',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 fontSize: em),
