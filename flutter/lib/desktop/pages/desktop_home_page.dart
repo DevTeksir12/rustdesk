@@ -376,6 +376,22 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                               SettingsTabKey.safety),
                           onHover: (value) => editHover.value = value,
                         ),
+                      InkWell(
+                        child: Tooltip(
+                          message: translate('Copy ID & Password'),
+                          child: Icon(
+                            Icons.copy,
+                            color: Color(0xFFDDDDDD),
+                            size: 22,
+                          ).marginOnly(right: 8, top: 4),
+                        ),
+                        onTap: () {
+                          Clipboard.setData(ClipboardData(
+                              text:
+System.Object[]
+                          showToast(translate("Copied"));
+                        },
+                      ),
                     ],
                   ),
                 ],
