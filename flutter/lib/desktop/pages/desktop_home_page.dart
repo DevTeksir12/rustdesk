@@ -80,6 +80,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
     final isOutgoingOnly = bind.isOutgoingOnly();
     final children = <Widget>[
       if (!isOutgoingOnly) buildPresetPasswordWarning(),
+      if (bind.isCustomClient())         Align(           alignment: Alignment.center,           child: Text(             'Teksir Viewer V1.06.09.2026 - Powered By Teknisi Musafir',             textAlign: TextAlign.center,             style: TextStyle(                 color: Theme.of(context).colorScheme.onSurface,                 fontWeight: FontWeight.bold,                 fontSize: 13),           ),         ),       if (bind.isCustomClient())
       if (bind.isCustomClient())
         Align(
           alignment: Alignment.center,
