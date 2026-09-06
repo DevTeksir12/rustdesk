@@ -2491,10 +2491,12 @@ class _AboutState extends State<_About> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset(
-                            'assets/icon.png',
-                            width: 56,
-                            height: 56,
+                          Center(
+                            child: Image.asset(
+                              'assets/logo_about.png',
+                              width: 90,
+                              height: 90,
+                            ),
                           ),
                           Text(
                             translate('Slogan_tip'),
