@@ -2491,9 +2491,10 @@ class _AboutState extends State<_About> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'Copyright © ${DateTime.now().toString().substring(0, 4)} Purslane Tech Pte. Ltd.\n$license',
-                            style: const TextStyle(color: Colors.white),
+                          Image.asset(
+                            'assets/icon.png',
+                            width: 56,
+                            height: 56,
                           ),
                           Text(
                             translate('Slogan_tip'),
