@@ -226,23 +226,46 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                     ),
                   ),
                   Flexible(
-                    child: GestureDetector(
-                      onDoubleTap: () {
-                        Clipboard.setData(
-                            ClipboardData(text: model.serverId.text));
-                        showToast(translate("Copied"));
-                      },
-                      child: TextFormField(
-                        controller: model.serverId,
-                        readOnly: true,
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          contentPadding: EdgeInsets.only(top: 10, bottom: 10),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: GestureDetector(
+                            onDoubleTap: () {
+                              Clipboard.setData(
+                                  ClipboardData(text: model.serverId.text));
+                              showToast(translate("Copied"));
+                            },
+                            child: TextFormField(
+                              controller: model.serverId,
+                              readOnly: true,
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.only(
+                                    top: 10, bottom: 10),
+                              ),
+                              style: TextStyle(
+                                fontSize: 22,
+                              ),
+                            ).workaroundFreezeLinuxMint(),
+                          ),
                         ),
-                        style: TextStyle(
-                          fontSize: 22,
+                        InkWell(
+                          child: Tooltip(
+                            message: translate('Copy ID & Password'),
+                          child: Icon(
+                            Icons.copy,
+                            color: Color(0xFFDDDDDD),
+                            size: 22,
+                          ).marginOnly(right: 8, top: 4),
+                          ),
+                          onTap: () {
+                            Clipboard.setData(ClipboardData(
+                                text:
+                                    'ID: ${model.serverId.text}\nPassword: ${model.serverPasswd.text}'));
+                            showToast(translate("Copied"));
+                          },
                         ),
-                      ).workaroundFreezeLinuxMint(),
+                      ],
                     ),
                   )
                 ],
@@ -376,22 +399,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                               SettingsTabKey.safety),
                           onHover: (value) => editHover.value = value,
                         ),
-                      InkWell(
-                        child: Tooltip(
-                          message: translate('Copy ID & Password'),
-                          child: Icon(
-                            Icons.copy,
-                            color: Color(0xFFDDDDDD),
-                            size: 22,
-                          ).marginOnly(right: 8, top: 4),
-                        ),
-                        onTap: () {
-                          Clipboard.setData(ClipboardData(
-                              text:
-                                  'ID: ${model.serverId.text}\nPassword: ${model.serverPasswd.text}'));
-                          showToast(translate("Copied"));
-                        },
-                      ),
+
                     ],
                   ),
                 ],
