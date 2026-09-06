@@ -2498,12 +2498,6 @@ class _AboutState extends State<_About> {
                               height: 56,
                             ),
                           ),
-                          Text(
-                            translate('Slogan_tip'),
-                            style: TextStyle(
-                                fontWeight: FontWeight.w800,
-                                color: Colors.white),
-                          ),
                           const SizedBox(height: 8),
                           const Center(
                             child: Text(
