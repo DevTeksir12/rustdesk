@@ -2503,7 +2503,25 @@ class _AboutState extends State<_About> {
                             style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 color: Colors.white),
-                          )
+                          ),
+                          const SizedBox(height: 8),
+                          const Center(
+                            child: Text(
+                              'Butuh jasa remote profesional?',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Center(
+                            child: ElevatedButton(
+                              onPressed: () => launchUrlString(
+                                  'https://wa.me/6282112415997'),
+                              child: const Text('Hubungi Kami'),
+                            ),
+                          ),
                         ],
                       ),
                     ),
