@@ -2494,8 +2494,8 @@ class _AboutState extends State<_About> {
                           Center(
                             child: Image.asset(
                               'assets/logo_about.png',
-                              width: 90,
-                              height: 90,
+                              width: 56,
+                              height: 56,
                             ),
                           ),
                           Text(
