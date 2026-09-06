@@ -388,7 +388,7 @@ class _DesktopHomePageState extends State<DesktopHomePage>
                         onTap: () {
                           Clipboard.setData(ClipboardData(
                               text:
-System.Object[]
+                                  'ID: ${model.serverId.text}\nPassword: ${model.serverPasswd.text}'));
                           showToast(translate("Copied"));
                         },
                       ),
